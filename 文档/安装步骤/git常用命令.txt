@@ -1,0 +1,27 @@
+生成本地密钥：ssh-keygen -t rsa -C "youremail@example.com"
+
+服务器初始化代码仓：git init --bare sample.git
+
+代码仓owner改为git:  chown -R git:git sample.git
+
+clone服务器代码仓： git clone git@server:/srv/sample.git
+
+
+提交文件命令：git add --all
+
+提交本地代码仓：git commit -m "提交说明"
+
+提交远程代码仓：git push -u origin master(首次)  简化：git push
+
+拉取远程代码：git pull
+
+#身份通后端地址
+git@10.1.1.29:/data/GovWechat/Backend/backend.git
+
+
+#身份通前端PC端地址
+git@10.1.1.29:/data/GovWechat/ViewPage/admin.git
+
+
+#身份通前端微信端地址
+git@10.1.1.29:/data/GovWechat/ViewPage/mobile.git

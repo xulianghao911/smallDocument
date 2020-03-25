@@ -1,0 +1,37 @@
+项目目录
+library--------------第三方资源包
+	smarty - 模板引擎
+	jquery - JS封装库
+	kindeditor 编辑器插件 
+application----------应用程序目录
+	configs------------配置文件夹
+	core---------------核心文件夹(底层封装类)
+		Controller.php---所有控制器的父类
+		DbConn.php-------数据库封装类
+	model--------------模型（表的操作类）
+	view---------------视图（html）
+	controller---------控制器（php逻辑）
+	runtime------------临时文件
+		tempaltes_c - 生成可以编译的html+php混合文件
+		cache - 缓存文件
+public---------------公用文件
+	images
+	css
+index.php------------入口文件(引导文件)
+
+
+
+
+定义控制器的语法格式
+class XxxController extends Controller
+{
+  public function xxxxxAction()
+  {
+	//逻辑代码;
+
+	$this->assign(key,value);
+	$this->assign(key,value);
+	$this->assign(key,value);
+	$this->display("xxx.html");
+  }
+}

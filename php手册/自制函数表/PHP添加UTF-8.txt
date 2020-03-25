@@ -1,0 +1,56 @@
+#添加PHP中文编码：
+
+header('Content-Type:text/html;charset=UTF-8');
+
+
+#HTML中表单中添加上传文件格式：
+
+<form action="upload02.php" method="post" enctype="multipart/form-data">
+
+
+
+#HTML格式：
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
+
+
+#连接数据库：
+
+$link = mysql_connect('localhost','root','');
+mysql_select_db('psd1603');
+mysql_query('SET NAMES utf8');
+
+
+#设置浏览器响应类型：
+
+header("Content-Type:image/png");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

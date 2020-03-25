@@ -1,0 +1,21 @@
+教程连接：https://jingyan.baidu.com/article/3c48dd3498d408e10be358ff.html
+
+
+
+
+运行regedid
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters] 
+AllowInsecureGuestAuth    值修改为“1”
+
+
+
+
+网络和共享中心  -->  更改高级共享设置  -->  来宾或公用
+勾选“启用网络发现”和“启用文件和打印共享”项
+
+
+
+
+运行services.msc
+找到“Server”服务
+“属性”窗口中，将“启动类型”设置为“自动”，同时点击“启动”按钮以启动此服务，点击“确定”完成设置

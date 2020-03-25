@@ -1,0 +1,20 @@
+Windows10中自带的Server:Microsoft-IIS/10.0，然后这个10却让原本支持组件无法安装了，php manager组件安装时提示“必须安装IIS7以上才可以安装”。那是不是真的就没法在新的IIS上安装了呢？显然不是的。自IIS7以来，微软的IIS更改并不大，架构一致，几乎所有IIS7能用的组件都能够在IIS7.7/8/8.5/10上安装。微软脑子秀逗，跳过了9，以为能解决版本识别的问题，没想到弄成10，还是出现了版本识别的问题，真是自己打自己的脸啊！
+那么怎么办呢？改注册表！
+打开regedit，找到:
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters
+右侧的 MajorVersion 是DWORD值，它的值十进制是10，把它改成9。然后运行php manager安装程序即可顺利安装上了！记得装完之后改回来。
+
+
+
+php manager的最新下载地址是：http://phpmanager.codeplex.com/releases/view/69115
+
+
+
+而IIS URL Rewrite 2.0更是奇怪，简体中文版的这个组件无法安装，同样也是检测版本不正常，而英文版却能正常安装。
+64位英文版下载地址是：http://go.microsoft.com/fwlink/?LinkID=615137
+简体中文版下载地址是：http://download.microsoft.com/download/4/E/7/4E7ECE9A-DF55-4F90-A354-B497072BDE0A/rewrite_x64_zh-CN.msi
+
+但是面对一堆英文，有些人肯定也会头疼了，那么简体中文版到底能不能装上。
+也能！还是改注册表，我通过分析MSI发现它会检测
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\InetStp
+也是 MajorVersion 项，这个也是 dword 值 10（注意是十进制），把它改成9，结果顺利安装上了！

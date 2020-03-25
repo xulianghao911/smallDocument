@@ -1,0 +1,19 @@
+
+
+1、安装node.js
+
+2、命令行:安装angualr     npm install -g @angular/cli
+
+3、命令行:创建项目(注意需要创建项目路径)	ng new demo
+
+4、命令行:安装第三方包（没有在安装）     npm install
+
+5、命令行:安装jquery(在angualr-cli.json加载)	npm install jquery --save
+
+6、命令行:安装bootstrap(在angualr-cli.json加载)		npm install bootstrap --save
+
+7、命令行:安装	npm install @types/jquery --save--dev
+
+8、命令行:安装	npm install @types/bootstrap --save--dev
+
+9、打包:  ng build --base-href /admin/dist/        可以用   http://localhost:8080/admin/dist/   访问
